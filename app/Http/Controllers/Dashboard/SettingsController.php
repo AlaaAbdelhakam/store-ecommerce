@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Dashboard;
 use App\Models\Setting;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\ShippingsRequest;
+use DB;
 
 class SettingsController extends Controller
 {
