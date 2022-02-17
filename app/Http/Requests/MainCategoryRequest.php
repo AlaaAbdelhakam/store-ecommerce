@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use App\Http\Enumerations\CategoryType;
 class MainCategoryRequest extends FormRequest
 {
     /**

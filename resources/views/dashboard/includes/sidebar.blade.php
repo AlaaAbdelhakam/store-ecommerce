@@ -85,7 +85,7 @@
                 </ul>
             </li>
 
-            <li class="nav-item"><a href=""><i class="la la-male"></i>
+           {{-- <li class="nav-item"><a href=""><i class="la la-male"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">المتاجر  </span>
                     <span
                         class="badge badge badge-success badge-pill float-right mr-2"> </span>
@@ -130,7 +130,7 @@
                 </ul>
             </li>
 
-
+--}}
             <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title"
                                                                                     data-i18n="nav.templates.main"> {{__('admin/sidebar.settings')}}</span></a>
                 <ul class="menu-content">
