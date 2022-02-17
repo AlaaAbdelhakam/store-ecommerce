@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('layouts.admin');
+// Route::get('/home', function () {
+//     return view('layouts.admin');
+// });
+
+
+Route::get('test', function () {
+
+    $category =  \App\Models\Category::find(2);
+
+     $category -> makeVisible(['translations']);
+
+     return $category;
 });

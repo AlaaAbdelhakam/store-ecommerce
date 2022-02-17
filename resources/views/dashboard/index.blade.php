@@ -1,7 +1,7 @@
+
 @extends('layouts.admin')
-
-
 @section('content')
+
     <div class="app-content content">
         <div class="content-wrapper">
             <div class="content-header row">
@@ -69,7 +69,7 @@
                                             <h4>عدد المنتجات </h4>
                                          </div>
                                         <div class="col-5 text-right">
-                                            <h4></h4>
+                                            <h4>200</h4>
                                          </div>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@
                                             <h4>عدد العملاء</h4>
                                          </div>
                                         <div class="col-5 text-right">
-                                            <h4>{{\App\Models\User::count()}}</h4>
+                                            <h4>2000</h4>
                                          </div>
                                     </div>
                                 </div>
@@ -183,4 +183,4 @@
         </div>
     </div>
 
-    @endsection
+    @stop
