@@ -39,6 +39,7 @@ class Category extends Model
          'is_active' => 'boolean',
     ];
 
+
     public function scopeParent($query){
         return $query -> whereNull('parent_id');
     }
@@ -53,5 +54,8 @@ class Category extends Model
     public function _parent(){
         return $this->belongsTo(self::class, 'parent_id');
     }
+
+
+
 
 }

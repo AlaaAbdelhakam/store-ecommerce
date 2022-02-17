@@ -11,9 +11,9 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="">الرئيسية </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href="{{route('admin.tags')}}">  tags </a>
+                                <li class="breadcrumb-item"><a href="{{route('admin.brands')}}">  ألماركات التجارية </a>
                                 </li>
-                                <li class="breadcrumb-item active">tag اضافة
+                                <li class="breadcrumb-item active">  أضافه ماركة تجارية
                                 </li>
                             </ol>
                         </div>
@@ -27,7 +27,8 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                     <a class="heading-elements-toggle"><i
+                                    <h4 class="card-title" id="basic-layout-form"> أضافه ماركة تجارية </h4>
+                                    <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
                                         <ul class="list-inline mb-0">
@@ -43,15 +44,26 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form"
-                                              action="{{route('admin.tags.store')}}"
+                                              action="{{route('admin.brands.store')}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
 
+                                            <div class="form-group">
+                                                <label> صوره الماركة </label>
+                                                <label id="projectinput7" class="file center-block">
+                                                    <input type="file" id="file" name="photo">
+                                                    <span class="file-custom"></span>
+                                                </label>
+                                                @error('photo')
+                                                <span class="text-danger">{{$message}}</span>
+                                                @enderror
+                                            </div>
 
                                             <div class="form-body">
 
-                                                 <div class="row">
+                                                <h4 class="form-section"><i class="ft-home"></i> بيانات الماركة التجارية </h4>
+                                                <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1"> الاسم
@@ -66,22 +78,37 @@
                                                             @enderror
                                                         </div>
                                                     </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group mt-1">
+                                                            <input type="checkbox" value="1"
+                                                                   name="is_active"
+                                                                   id="switcheryColor4"
+                                                                   class="switchery" data-color="success"
+                                                                   checked />
+                                                            <label for="switcheryColor4"
+                                                                   class="card-title ml-1">الحالة  </label>
 
-                                                     <div class="col-md-6">
-                                                         <div class="form-group">
-                                                             <label for="projectinput1"> اسم بالرابط
-                                                             </label>
-                                                             <input type="text" id="name"
-                                                                    class="form-control"
-                                                                    placeholder="  "
-                                                                    value="{{old('slug')}}"
-                                                                    name="slug">
-                                                             @error("slug")
-                                                             <span class="text-danger">{{$message}}</span>
-                                                             @enderror
-                                                         </div>
-                                                     </div>
+                                                            @error("is_active")
+                                                            <span class="text-danger">{{$message }}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
 
+                                              {{--     <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="projectinput1"> اسم بالرابط
+                                                            </label>
+                                                            <input type="text" id="name"
+                                                                   class="form-control"
+                                                                   placeholder="  "
+                                                                   value="{{old('slug')}}"
+                                                                   name="slug">
+                                                            @error("slug")
+                                                            <span class="text-danger">{{$message}}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                    --}}
 
 
                                                 </div>
